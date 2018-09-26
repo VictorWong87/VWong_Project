@@ -1,0 +1,9 @@
+.wrap-login100 {
+    background-color: lightgrey;
+    opacity: 0.9;
+    border:10px solid white;
+    border-radius: 30px;
+}
+.travelAgent {
+    font-family: 'Courier New', Courier, monospace;
+}
