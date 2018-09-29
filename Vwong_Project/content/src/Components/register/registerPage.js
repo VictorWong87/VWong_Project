@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
+import './register.css';
 import '../../index.css';
-import { HomeLayout } from './homeLayout';
+import { RegisterLayout } from './registerLayout';
 
-class HomePage extends Component {
+class RegisterPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      firstName: '',
+      lastName: '',
+      birthday:'',
+      email: '',
+      password: '',
+      passwordConfirm: ''
     }
   }
 
-  onClickHome = () => {
-    this.props.history.push('/user/home');
+  onClickLogin = () => {
+    this.props.history.push('/');
   }
 
   onChangeInput = (onChange) => (e) => {
@@ -29,9 +35,10 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-       <HomeLayout
-             onChange={this.onChange}
-             onClick={this.onClickHome}
+       <RegisterLayout
+          onChange={this.onChange}
+          onChangeInput={this.onChangeInput}
+          onClickLogin={this.onClickLogin}
         />
           
       </React.Fragment>
@@ -39,4 +46,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default RegisterPage;

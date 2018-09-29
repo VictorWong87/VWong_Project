@@ -1,0 +1,99 @@
+.container-pokestore100 {
+    width: 100%;  
+    min-height: 140vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;;
+    z-index: 1;
+}
+.top-left {
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    width: 25%;
+    text-align: justify;
+    position: absolute;
+        top: 70px;
+        left:0;
+}
+.top-left1 {
+    
+    position: absolute;
+        top: 220px;
+        left:250px;
+}
+.poke-store {
+    color:yellow;
+    text-shadow:
+    -1px -1px 0 blue,  
+     1px -1px 0 blue,
+     -1px 1px 0 blue,
+      1px 1px 0 blue;
+}
+h1 {
+    text-align: center
+}
+.limitedEditionSwitch {
+    width:70%
+}
+.limitedEditionSwitch:hover {
+    transform: scale(1.5); 
+}
+.sunglasses {
+    width:100%;
+}
+.sunglasses:hover {
+    transform: scale(1.5); 
+}
+.pokemonTShirt{
+    width: 50%
+}
+.pokemonTShirt.hover {
+    transform: scale(1.5); 
+}
+.center-items {
+    position: absolute;
+    top: 300px;
+    left:50px;
+    columns: 2;
+}
+.seasonOneCardPack {
+    width: 30%
+}
+.seasonOneCardPack:hover {
+    transform: scale(1.5); 
+}
+.eeveeNinePackStuffed {
+    width:70%
+}
+.eeveeNinePackStuffed:hover {
+    transform: scale(1.5); 
+}
+.conversePokemonShoes {
+    width: 80%
+}
+.conversePokemonShoes.hover {
+    transform: scale(1.5); 
+}
+.lEDWatches {
+    width: 60%
+}
+.lEDWatches.hover {
+    transform: scale(1.5); 
+}
+.karatGold {
+    width: 70%
+}
+.karatGold.hover {
+    transform: scale(1.5); 
+}

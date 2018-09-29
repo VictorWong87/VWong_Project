@@ -23,7 +23,17 @@
  
   /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
-  
+  .PokemonLogo {
+      width: 50%
+  }
+  .pokemon-elites {
+      color:yellow;
+      text-shadow:
+      -1px -1px 0 blue,  
+       1px -1px 0 blue,
+       -1px 1px 0 blue,
+        1px 1px 0 blue;
+  }
   * {
       margin: 0px; 
       padding: 0px; 

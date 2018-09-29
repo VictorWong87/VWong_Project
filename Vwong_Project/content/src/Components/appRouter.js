@@ -3,7 +3,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import LoginPage from './login/loginPage';
 import HomePage from './home/homePage';
-import SellPage from './sell/sellPage';
+// import SellPage from './sell/sellPage';
+// import Scrape from './WebScraping/test1click';
+import RegisterPage from './register/registerPage';
+import PokeFilePage from './pokefile/pokefilePage';
+import PokeStorePage from './pokestore/pokestorePage'
 
 
 //const NoMatch: React.StatelessComponent<{ location }> = ({ location }) => (
@@ -38,9 +42,14 @@ class AppRouter extends React.Component {
 			<React.Fragment>
                 <BrowserRouter>
 				<Switch>
+
 					<Route exact path="/" component={LoginPage} />
-					<Route path="/user/sell" component={SellPage} />
+					{/* <Route path="/user/sell" component={SellPage} /> */}
 					<Route exact path="/user/home" component={HomePage} />
+					{/* <Route exact path="/user/scrape" component={Scrape} /> */}
+					<Route exact path="/user/register" component={RegisterPage} />
+					<Route exact path="/user/poke-file" component={PokeFilePage} />
+					<Route exact path="/user/poke-store" component={PokeStorePage} />
 					
 				</Switch>
                 </BrowserRouter>
