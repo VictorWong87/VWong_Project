@@ -7,7 +7,9 @@ import HomePage from './home/homePage';
 // import Scrape from './WebScraping/test1click';
 import RegisterPage from './register/registerPage';
 import PokeFilePage from './pokefile/pokefilePage';
-import PokeStorePage from './pokestore/pokestorePage'
+import PokeStorePage from './pokestore/pokestorePage';
+import UploadPage from './uploads/upload';
+import PokeTrainerPage from './poketrainer/pokeTrainerPage'
 
 
 //const NoMatch: React.StatelessComponent<{ location }> = ({ location }) => (
@@ -50,7 +52,8 @@ class AppRouter extends React.Component {
 					<Route exact path="/user/register" component={RegisterPage} />
 					<Route exact path="/user/poke-file" component={PokeFilePage} />
 					<Route exact path="/user/poke-store" component={PokeStorePage} />
-					
+					<Route exact path="/user/uploads" component={UploadPage} />
+					<Route exact path="user/poke-trainer" component={PokeTrainerPage} />
 				</Switch>
                 </BrowserRouter>
 	    </React.Fragment>

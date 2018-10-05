@@ -15,6 +15,25 @@
     background-size: cover;
     background-repeat: no-repeat;;
   }
+  .card-body {
+    background-color: lightgray;
+    columns: 2
+  }
+  .pp {
+    width: 50%
+  }
+  #edit-profile {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-33%, -50%);
+    /* opacity: .9; */
+    height: fit-content
+  }
+  div.text-center {
+    text-align: center
+  }
+  
   /* .Pokefile100-form-title {
     color:yellow;
     text-shadow:

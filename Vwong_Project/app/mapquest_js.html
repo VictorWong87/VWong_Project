@@ -1,0 +1,42 @@
+<html>
+   <head>
+        <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <script src="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.css"/>
+   </head>
+         <body>
+                <div id="to_map_canvas" style="height:100%;width:100%;"></div>
+                </div>
+            <script>
+
+            var mapObj = null;
+            var options = {
+            elt : document.getElementById("to_map_canvas"),
+            zoom : 5,
+            latLng : {
+                lat : 39.5276,
+                lng : -99.141974
+            },
+            mtype : 'map',
+            bestFitMargin : 0,
+            zoomOnDoubleClick : true
+            };
+            mapObj = new MQA.TileMap(options);
+            // The above lat and lng params corresponds to North .America
+            // Other continents lat and long values given below.
+                    
+            // new MQA.LatLng(-3.75, -63); // South America
+            //         new MQA.LatLng(55, -6); // EU
+            // new MQA.LatLng(24.8, 118.78); // AISA
+            // new MQA.LatLng(-25.56, 134.36); // Aus
+            // new MQA.LatLng(-12, 25); // Africa
+
+            var marker = new MQA.Poi({
+                lat : latitude,
+                lng :longitude
+            });
+            mapObj=addShape(marker);
+            </script>
+    </body>
+</html>

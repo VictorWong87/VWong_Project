@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import '../../index.css';
-
+import TextInput from "../Common/TextInput"
 
 
 export const LoginLayout = (props) => {
@@ -44,7 +44,14 @@ export const LoginLayout = (props) => {
                     </span>
                   </div>
                   <div className="wrap-input100 validate-input" data-validate="Email is required">
-                    <input onChange={props.onChangeInput(props.onChange)} className="input100" type="text" name="email" />
+                    <TextInput
+                    className="input100" 
+                    type="text" 
+                    id="email"
+                    name="email"
+                    val={props.state.email}
+                    handleChange={props.handleChange}
+                     />
                     <span className="focus-input100" />
                   </div>
                   <div className="p-t-13 p-b-9">
@@ -56,12 +63,22 @@ export const LoginLayout = (props) => {
                     </a>
                   </div>
                   <div className="wrap-input100 validate-input" data-validate="Password is required">
-                    <input onChange={props.onChangeInput(props.onChange)} className="input100" type="password" name="pass" />
+                    <TextInput 
+                    className="input100" 
+                    type="password" 
+                    id="password"
+                    name="pass"
+                    val={props.state.password}
+                    handleChange={props.handleChange}
+                     />
                     <span className="focus-input100" />
                   </div>
                   <div className="container-login100-form-btn m-t-17">
-                    <button onClick={props.onClickLogin} className="login100-form-btn">
-                      Sign In
+                    <button 
+                      onClick={props.handleClick} 
+                      className="login100-form-btn"
+                    >
+                    Sign In
                     </button>
                   </div>
                   <div className="w-full text-center p-t-55">

@@ -51,7 +51,8 @@ class PokeFilePage extends Component {
 
        <PokeFileLayout
              onChange={this.onChange}
-             onClick={this.onClickPokefile}
+             onClickPokefile={this.onClickPokefile}
+             onchangeInput={this.onChangeInput}
         />
           
       </React.Fragment>

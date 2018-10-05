@@ -32,16 +32,16 @@ class Navbar extends React.Component {
 								<strong>Poke-Elite  ||</strong>
 							</Link>
 							<Link to="/user/poke-file" className="nav-item nav-link">
-								Poke-File  ||
+									Poke-File  ||
 							</Link>
 							<span>
 								<Link to="/user/poke-trainer" className="nav-item nav-link">
-									Poke-Trainer  ||
+									Poke-Trainers  ||
 								</Link>
 							</span>
 							<span>
 								<Link to="/user/poke-master" className="nav-item nav-link">
-									Poke-Master  ||
+									Poke-Masters  ||
 								</Link >
 							</span>
 							<span>
@@ -82,6 +82,11 @@ class Navbar extends React.Component {
 							<span>
 								<Link to="/user/contact-us" className="nav-item nav-link">
 									Contact Us  ||
+								</Link>
+							</span>
+							<span>
+								<Link to="/user/logout" className="nav-item nav-link">
+									Log Out  ||
 								</Link>
 							</span>
 							

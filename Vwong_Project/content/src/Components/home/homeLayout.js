@@ -1,20 +1,22 @@
 import React from 'react';
 import '../../index.css';
-import { HomeForm } from "../home/homeForm"
-import  Navbar  from "../navbar/navbar"
+import  HomeForm  from "../home/homeForm";
+import  Navbar  from "../navbar/navbar";
 
+class HomeLayout extends React.Component {
 
-export const HomeLayout = (props) => {
- 
+  render() {  
+    
     return (
-      <React.Fragment>
+        <React.Fragment>
 
       		<Navbar/>
 
         	<HomeForm/>
 
-      </React.Fragment>
-    );
+        </React.Fragment>
+    )
   }
+}
 
-
+export default HomeLayout

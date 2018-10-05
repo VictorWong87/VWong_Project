@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.css"/>
+
+    <script type="text/javascript">
+
+      window.onload = function () {
+        L.mapquest.key = 'xXZTZ0rxYWj9UT3T3aBAQYQi2DTpXKya';
+        var baseLayer = L.mapquest.tileLayer('map');
+
+        var map = L.mapquest.map('map', {
+          center: /*[32.715736, -117.161087]*/[37.09024,-95.71289100000001],
+          layers: baseLayer,
+          zoom: 10
+        });
+        const location = $("#state")
+        L.mapquest.geocoding().geocode(location)
+
+        L.control.layers({
+          'Map': baseLayer,
+          'Hybrid': L.mapquest.tileLayer('hybrid'),
+          'Satellite': L.mapquest.tileLayer('satellite'),
+          'Light': L.mapquest.tileLayer('light'),
+          'Dark': L.mapquest.tileLayer('dark')
+        }).addTo(map);
+
+        var drawnItems = L.featureGroup().addTo(map);
+
+        map.addControl(new L.Control.Draw({
+          edit: {
+            featureGroup: drawnItems,
+            poly: {
+              allowIntersection: false
+            }
+          },
+          draw: {
+            polygon: {
+              allowIntersection: false,
+              showArea: true
+            }
+          }
+        }));
+
+        map.on(L.Draw.Event.CREATED, function (event) {
+          var layer = event.layer;
+
+          drawnItems.addLayer(layer);
+        })
+      }
+    </script>
+  </head>
+
+  <body style="border: 0; margin: 0;">
+    <div id="map" style="width: 100%; height: 900px;"></div>
+    <form>
+        <label>Name of Location :</label>
+        <input type="text" class="location" id="state" placeholder="Location"/>
+        <button type="button" id="locationButton" class="login100-form-btn">Find Location</button>
+    </form>
+  </body>
+</html>
